@@ -1,0 +1,43 @@
+div.col-md-9 h1:first-of-type {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+div.col-md-9 p:first-of-type {
+    text-align: center;
+}
+
+div.col-md-9 p.admonition-title:first-of-type {
+    text-align: left;
+}
+
+div.col-md-9 h1:first-of-type .headerlink {
+    display: none;
+    
+}
+
+code.no-highlight {
+    color: black;
+}
+
+[data-md-color-primary=green] .md-header {
+    background-color: #3c8a2e;
+
+}
+
+
+
+[data-md-color-accent=light-green] .md-nav__link:hover{
+color: #7ab800;
+
+}
+
+[data-md-color-primary=green] .md-nav__link--active, [data-md-color-primary=green] .md-nav__link:active {
+    color: #7ab800;
+
+}
+
+
+
+

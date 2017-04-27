@@ -1,0 +1,1136 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta name="description" content=" Waste Management API">
+
+
+        <link rel="canonical" href="http://www.mkdocs.org/ticketp/">
+
+
+        <meta name="author" content="WM ESB Team">
+
+
+        <link rel="shortcut icon" href="../images/favicon.ico">
+
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.0.3">
+
+
+
+        <title>Show ticket prices - Waste Management API</title>
+
+
+
+      <script src="../assets/javascripts/modernizr-5b0c41c2b5.js"></script>
+
+
+      <link rel="stylesheet" href="../assets/stylesheets/application-166740f5bb.css">
+
+        <link rel="stylesheet" href="../assets/stylesheets/application-02ce7adcc2.palette.css">
+
+
+
+
+
+
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+      <link rel="stylesheet" href="../css/extra.css">
+
+
+  </head>
+
+
+
+
+    <body data-md-color-primary="green" data-md-color-accent="light-green">
+
+    <svg class="md-svg">
+      <defs>
+
+
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Waste Management API" class=" md-logo  md-header-nav__button">
+
+            <img src="../images/wmlogo.svg" width="75" height=" ">
+
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+
+
+
+                <span class="md-header-nav__parent">
+                  Tickets
+                </span>
+
+                <span class="md-header-nav__parent">
+                  Disposal
+                </span>
+
+
+            Show ticket prices
+
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+
+
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-logo  md-nav__button">
+
+        <img src="../images/wmlogo.svg">
+
+    </i>
+    Waste Management API
+  </label>
+
+  <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+  <li class="md-nav__item">
+
+      <a href=".." title="Overview" class="md-nav__link">
+        Overview
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../authentication/" title="Security" class="md-nav__link">
+        Security
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../howtotest/" title="How to Test" class="md-nav__link">
+        How to Test
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item md-nav__item--nested">
+
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+
+    <label class="md-nav__link" for="nav-4">
+      Rest APIs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4">
+        Rest APIs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+  <li class="md-nav__item md-nav__item--nested">
+
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+
+    <label class="md-nav__link" for="nav-4-1">
+      Customers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4-1">
+        Customers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../customersoverview/" title="Overview" class="md-nav__link">
+        Overview
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item md-nav__item--nested">
+
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-2" type="checkbox" id="nav-4-1-2">
+
+    <label class="md-nav__link" for="nav-4-1-2">
+      Activities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4-1-2">
+        Activities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../activitiesoverview/" title="Overview" class="md-nav__link">
+        Overview
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../email/" title="List emails" class="md-nav__link">
+        List emails
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../issues/" title="List issues" class="md-nav__link">
+        List issues
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../notes/" title="List notes" class="md-nav__link">
+        List notes
+      </a>
+
+  </li>
+
+
+      </ul>
+    </nav>
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../balance/" title="Balance" class="md-nav__link">
+        Balance
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item md-nav__item--nested">
+
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-4" type="checkbox" id="nav-4-1-4">
+
+    <label class="md-nav__link" for="nav-4-1-4">
+      Cases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4-1-4">
+        Cases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../casesoverview/" title="Overview" class="md-nav__link">
+        Overview
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../cases/" title="List cases" class="md-nav__link">
+        List cases
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../caseid/" title="Show case details" class="md-nav__link">
+        Show case details
+      </a>
+
+  </li>
+
+
+      </ul>
+    </nav>
+  </li>
+
+
+
+
+  <li class="md-nav__item md-nav__item--nested">
+
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-5" type="checkbox" id="nav-4-1-5">
+
+    <label class="md-nav__link" for="nav-4-1-5">
+      Contacts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4-1-5">
+        Contacts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../contactsoverview/" title="Overview" class="md-nav__link">
+        Overview
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../contacts/" title="List contacts" class="md-nav__link">
+        List contacts
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../Contactbilling/" title="Show billing contact" class="md-nav__link">
+        Show billing contact
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../Contactservices/" title="Show service contact" class="md-nav__link">
+        Show service contact
+      </a>
+
+  </li>
+
+
+      </ul>
+    </nav>
+  </li>
+
+
+
+
+  <li class="md-nav__item md-nav__item--nested">
+
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-6" type="checkbox" id="nav-4-1-6">
+
+    <label class="md-nav__link" for="nav-4-1-6">
+      Invoices
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4-1-6">
+        Invoices
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../invoicesoverview/" title="Overview" class="md-nav__link">
+        Overview
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../InvoiceS/" title="List invoices" class="md-nav__link">
+        List invoices
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../InvoiceD/" title="Show invoice details" class="md-nav__link">
+        Show invoice details
+      </a>
+
+  </li>
+
+
+      </ul>
+    </nav>
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../profiles/" title="Profiles" class="md-nav__link">
+        Profiles
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item md-nav__item--nested">
+
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-8" type="checkbox" id="nav-4-1-8">
+
+    <label class="md-nav__link" for="nav-4-1-8">
+      Services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4-1-8">
+        Services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../servicesoverview/" title="Overview" class="md-nav__link">
+        Overview
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../Services/" title="List services" class="md-nav__link">
+        List services
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../serviceplan/" title="List planned services" class="md-nav__link">
+        List planned services
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../servicestat/" title="List services history" class="md-nav__link">
+        List services history
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../servicematerial/" title="List services material" class="md-nav__link">
+        List services material
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../serviceoperations/" title="List services operation" class="md-nav__link">
+        List services operation
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../serviceprice/" title="List services price" class="md-nav__link">
+        List services price
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../ETA/" title="Show service ETA" class="md-nav__link">
+        Show service ETA
+      </a>
+
+  </li>
+
+
+      </ul>
+    </nav>
+  </li>
+
+
+
+
+  <li class="md-nav__item md-nav__item--nested">
+
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-9" type="checkbox" id="nav-4-1-9" checked>
+
+    <label class="md-nav__link" for="nav-4-1-9">
+      Tickets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4-1-9">
+        Tickets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../ticketsoverview/" title="Overview" class="md-nav__link">
+        Overview
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../tickets/" title="List tickets" class="md-nav__link">
+        List tickets
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../ticketd/" title="Show ticket details" class="md-nav__link">
+        Show ticket details
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item md-nav__item--nested">
+
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1-9-4" type="checkbox" id="nav-4-1-9-4" checked>
+
+    <label class="md-nav__link" for="nav-4-1-9-4">
+      Disposal
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4-1-9-4">
+        Disposal
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../disposaloverview/" title="Overview" class="md-nav__link">
+        Overview
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../disposalticketsummary/" title="List disposal tickets" class="md-nav__link">
+        List disposal tickets
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../disposalticketdetails/" title="Show ticket details" class="md-nav__link">
+        Show ticket details
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../ticketm/" title="Show ticket materials" class="md-nav__link">
+        Show ticket materials
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+
+
+
+
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Show ticket prices
+      </label>
+
+    <a href="./" title="Show ticket prices" class="md-nav__link md-nav__link--active">
+      Show ticket prices
+    </a>
+
+
+<nav class="md-nav md-nav--secondary">
+
+
+
+
+
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#uri" title="URI" class="md-nav__link">
+    URI
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#headers" title="Headers" class="md-nav__link">
+    Headers
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#request-parameters" title="Request Parameters" class="md-nav__link">
+    Request Parameters
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#response-fields" title="Response Fields" class="md-nav__link">
+    Response Fields
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#sample-request" title="Sample Request" class="md-nav__link">
+    Sample Request
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#sample-response" title="Sample Response" class="md-nav__link">
+    Sample Response
+  </a>
+
+</li>
+
+    </ul>
+
+</nav>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../ticketsu/" title="Show ticket surcharges" class="md-nav__link">
+        Show ticket surcharges
+      </a>
+
+  </li>
+
+
+      </ul>
+    </nav>
+  </li>
+
+
+      </ul>
+    </nav>
+  </li>
+
+
+      </ul>
+    </nav>
+  </li>
+
+
+      </ul>
+    </nav>
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../releasenotes/" title="Release Notes" class="md-nav__link">
+        Release Notes
+      </a>
+
+  </li>
+
+
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+
+<nav class="md-nav md-nav--secondary">
+
+
+
+
+
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#uri" title="URI" class="md-nav__link">
+    URI
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#headers" title="Headers" class="md-nav__link">
+    Headers
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#request-parameters" title="Request Parameters" class="md-nav__link">
+    Request Parameters
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#response-fields" title="Response Fields" class="md-nav__link">
+    Response Fields
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#sample-request" title="Sample Request" class="md-nav__link">
+    Sample Request
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#sample-response" title="Sample Response" class="md-nav__link">
+    Sample Response
+  </a>
+
+</li>
+
+    </ul>
+
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+
+
+
+                <p><link href="markdown.css" rel="stylesheet"></link></p>
+<h1 id="show-ticket-prices">Show ticket prices<a class="headerlink" href="#show-ticket-prices" title="Permanent link">&para;</a></h1>
+<p>Use <strong>/tickets/{ticketID}/prices</strong> to retrieve price of a ticket created at landfill for disposal
+To retrieve summary of all the tickets, see <a href="../disposalticketsummary/">disposal ticket api</a></p>
+<hr />
+<h3 id="uri"><strong>URI</strong><a class="headerlink" href="#uri" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">GET</span> <span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">customers</span><span class="o">/</span><span class="p">{</span><span class="n">customerId</span><span class="p">}</span><span class="o">/</span><span class="n">tickets</span><span class="o">/</span><span class="p">{</span><span class="n">ticketId</span><span class="p">}</span><span class="o">/</span><span class="n">prices</span><span class="err">?</span><span class="n">ticket_type</span><span class="o">=</span><span class="n">disposal</span>
+</pre></div>
+
+
+<hr />
+<h3 id="headers"><strong>Headers</strong><a class="headerlink" href="#headers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Data Type</th>
+<th>Allowed Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Request-Tracking-Id</td>
+<td>Y</td>
+<td>String</td>
+<td></td>
+<td>Unique Identifier for each request</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Y</td>
+<td>String</td>
+<td></td>
+<td>Access token</td>
+</tr>
+<tr>
+<td>ClientId</td>
+<td>Y</td>
+<td>String</td>
+<td></td>
+<td>Will be provided by WM</td>
+</tr>
+<tr>
+<td>Accept</td>
+<td>N</td>
+<td>String</td>
+<td>application/json or application/xml</td>
+<td>Default is application/json</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="request-parameters"><strong>Request Parameters</strong><a class="headerlink" href="#request-parameters" title="Permanent link">&para;</a></h3>
+<p>Pass the following parameters in the request.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Data Type</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customerId</td>
+<td>Y</td>
+<td>Number</td>
+<td>path</td>
+<td>Unique Customer Identifier</td>
+</tr>
+<tr>
+<td>ticketId</td>
+<td>Y</td>
+<td>Number</td>
+<td>path</td>
+<td>Unique ID assigned to a ticket</td>
+</tr>
+<tr>
+<td>ticket_type</td>
+<td>Y</td>
+<td>String</td>
+<td>query</td>
+<td>Ticket Type(disposal)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="response-fields"><strong>Response Fields</strong><a class="headerlink" href="#response-fields" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>request_tracking_id</td>
+<td>String</td>
+<td>Unique identifier for each request</td>
+</tr>
+<tr>
+<td>tickets</td>
+<td>Object</td>
+<td>Ticket details</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>Ticket status</td>
+</tr>
+<tr>
+<td>material_subtotal</td>
+<td>Number</td>
+<td>Amount charged for the material</td>
+</tr>
+<tr>
+<td>surcharge</td>
+<td>Number</td>
+<td>Amount charged as part of surcharges</td>
+</tr>
+<tr>
+<td>tax</td>
+<td>Number</td>
+<td>Amount charged as taxes</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>Number</td>
+<td>Total amount charged for the specified ticket</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>String</td>
+<td>currency code(USD or CAD)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For information about how to test, see <a href="../howtotest/">How To Test</a></p>
+</div>
+<h3 id="sample-request"><strong>Sample Request</strong><a class="headerlink" href="#sample-request" title="Permanent link">&para;</a></h3>
+<p>http://api.wm.com/v1/customers/123456789/tickets/822908/price?ticket_type=disposal</p>
+<hr />
+<h3 id="sample-response"><strong>Sample Response</strong><a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;request_tracking_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1234547&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tickets&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Inactive&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;material_subtotal&quot;</span><span class="p">:</span> <span class="s2">&quot;147.14&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;surcharge&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tax&quot;</span><span class="p">:</span> <span class="s2">&quot;18.38&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;165.52&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;United States Dollar&quot;</span>
+    <span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr />
+
+            </article>
+          </div>
+        </div>
+      </main>
+
+
+<footer class="md-footer">
+
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+
+          <a href="../ticketm/" title="Show ticket materials" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Show ticket materials
+              </span>
+            </div>
+          </a>
+
+
+          <a href="../ticketsu/" title="Show ticket surcharges" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Show ticket surcharges
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+
+      </nav>
+    </div>
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+
+          <div class="md-footer-copyright__highlight">
+            ©2017 Waste Management - Proprietary and Confidential
+          </div>
+
+        <!-- powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs</a>-->
+
+      </div>
+
+
+
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+      <script src="../assets/javascripts/application-39a173f6f5.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
+
+
+
+
+
+  </body>
+</html>
